@@ -703,11 +703,15 @@ footer .copyright {
     }
 }
 
+
+
+
 #cart{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     text-align: center;
     width: 35%;
     margin: 0 auto;
@@ -720,6 +724,7 @@ footer .copyright {
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 0.6s;
+    z-index: 999;
 }
 
 .productCart{

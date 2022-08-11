@@ -1,13 +1,16 @@
 const contenedorProductos = document.getElementById('pro-container');
 let stockProductos = [
     {
-        "id": 1, "nombre": "Buzo 1", "cantidad": 1, "desc": "Remera", "precio": 1200, "talle": "xl"
+        "id": 1, "nombre": "Buzo 1", "cantidad": 1, "desc": "Remera", "precio": 1200, "talle": "xl", "urlImage":"images/products/f1.jpg"
     },
     {
-        "id": 2, "nombre": "Buzo 2", "cantidad": 1, "desc": "Remera", "precio": 1300, "talle": "xl"
+        "id": 2, "nombre": "Buzo 2", "cantidad": 1, "desc": "Remera", "precio": 1300, "talle": "xl", "urlImage":"images/products/f2.jpg"
     },
     {
-        "id": 3, "nombre": "Buzo 3", "cantidad": 1, "desc": "Remera", "precio": 200, "talle": "xl"
+        "id": 3, "nombre": "Buzo 3", "cantidad": 1, "desc": "Remera", "precio": 200, "talle": "xl", "urlImage":"images/products/f3.jpg"
+    },
+    {
+        "id": 4, "nombre": "Buzo 4", "cantidad": 1, "desc": "Remera", "precio": 200, "talle": "xl", "urlImage":"images/products/f4.jpg"
     }
 ]
 
@@ -15,7 +18,7 @@ stockProductos.forEach((producto) => {
     const div = document.createElement('div');
     div.classList.add('pro');
     div.innerHTML = `
-    <img src="images/products/f1.jpg" alt="">
+    <img src="${producto.urlImage}" alt="">
     <div class="des">
         <span>adidas</span>
         <h5>${producto.nombre}</h5>

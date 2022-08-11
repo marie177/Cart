@@ -64,6 +64,11 @@ const agregarAlCarrito = (prodId) => {
 
 const eliminarDelCarrito = (prodId) => {
     const item = stockProductos.find((producto) => producto.id === prodId);
+    const prod = carrito.map(prod => {
+        if(prod.id === prodId){
+            prod.cantidad=1;
+        }
+    });
     const indice = carrito.indexOf(item);
     carrito.splice(indice, 1);
     actualizarCarrito();
@@ -99,6 +104,9 @@ const actualizarCarrito = () => {
 const emptyCartButton = document.getElementById('empty-cart');
 
 emptyCartButton.addEventListener('click', () => {
+    const prod = carrito.map(prod => {
+        prod.cantidad = 1;           
+    }   );
     carrito.length = 0;
     actualizarCarrito();
 })
